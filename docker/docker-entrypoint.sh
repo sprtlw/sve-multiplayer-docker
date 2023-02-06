@@ -1,6 +1,13 @@
 #!/bin/bash
 export HOME=/config
 
+# start pulseaudio
+pulseaudio -D --exit-idle-time=-1
+
+# create a virtual speaker output, otherwise SpaceCore will crash when trying
+# to find output device, and Stardew Valley Expanded will not load
+pactl load-module module-null-sink sink_name=SpeakerOutput sink_properties=device.description="Dummy_Output"
+
 for modPath in /data/Stardew/Stardew\ Valley/Mods/*/
 do
   mod=$(basename "$modPath")

@@ -5,7 +5,7 @@ FROM jlesage/baseimage-gui:debian-10
 ENV APP_NAME="StardewValley"
 
 RUN apt-get update
-RUN apt-get install -y wget unzip tar strace mono-complete xterm gettext-base jq netcat procps 
+RUN apt-get install -y wget unzip tar strace mono-complete xterm gettext-base jq netcat procps pulseaudio
 RUN APP_ICON_URL=https://stardewcommunitywiki.com/mediawiki/images/4/48/Fiddlehead_Fern.png && \
     install_app_icon.sh "$APP_ICON_URL"
 
