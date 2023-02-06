@@ -29,22 +29,6 @@ cd sve-multiplayer-docker
 docker-compose up
 ```
 
-### Ansible !deprecated!
-
-Create an inventory file with your hosts
-
-```
-ansible -i <your_inventori> playbook.yml
-```
-
-### Terraform (with Hetzner Cloud) !deprecated!
-
-Enter your API Token in `terraform/vars.auto.tfvars` and modify the resource section in `main.tf` to your liking, then run the following script:
-
-```
-./terra.sh
-```
-
 ## Game Setup
 
 Intially you have to create or load a game once via VNC or Web interface. After
