@@ -3,6 +3,33 @@
 This project aims to autostart a Stardew Valley Expanded Multiplayer Server as
 easy as possible.
 
+## Download SVE and Dependencies
+
+Because the SVE base mod is extremely large (about 500M), you can download it
+through this [Google Drive
+folder](https://drive.google.com/drive/folders/1O5GnWmlfCW6txotyLeijIR3y2PXGKa4I?usp=share_link),
+or you can install it manually. An auto installation script will be provided
+soon.
+
+Extract the mods to `docker/mods` so that the directory listing looks like:
+
+```
+$ ls ./docker/mods -1
+'Always On Server'
+AutoLoadGame
+ChatCommands
+CropsAnytimeAnywhere
+FriendsForever
+"Grandpa's Farm"
+'Immersive Farm 2 Remastered'
+NoFenceDecay
+NonDestructiveNPCs
+RemoteControl
+SVE
+TimeSpeed
+UnlimitedPlayers
+```
+
 ## Changing Farm Types
 
 To enable different farm types that are supported by Stardew Valley Expanded,
@@ -49,6 +76,10 @@ enabled.
 The name of the environment variable is the mod name in the `docker/mods`
 directory, allcaps with no spaces. For example, to enable `docker/mods/Tractor
 Mod`, you must add the environment variable `ENABLE_TRACTORMOD=true`.
+
+If the name of the mod contains characters that can not be used for environment
+variables (slashes, brackets, etc.), you must either rename it for move it to a
+nested directory that has a valid name.
 
 ### VNC
 

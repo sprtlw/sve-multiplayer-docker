@@ -1,3 +1,4 @@
+# vim: set tabstop=2
 version: '2.2'
 
 services:
@@ -125,6 +126,13 @@ services:
 
       ## Non-destructive NPCs mod
       - ENABLE_NONDESTRUCTIVENPCS_MOD=${ENABLE_NONDESTRUCTIVENPCS_MOD-false}
+
+      ## This enables everything in docker/mods/SVE
+      - ENABLE_SVE_MOD=true
+
+      ## Different farm types. DO NOT ENABLE BOTH OF THEM AT ONCE.
+      - ENABLE_GRANDPASFARM_MOD=false
+      - ENABLE_IMMERSIVEFARM2REMASTERED_MOD=false
 
     ports:
       # VNC
