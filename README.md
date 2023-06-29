@@ -1,3 +1,5 @@
+# See docker-compose for example of precompiled image. just run docker-compose up -d and you'll be up and running!
+
 # Stardew Valley EXPANDED Multiplayer Docker Compose
 
 This project aims to autostart a Stardew Valley Expanded Multiplayer Server as
